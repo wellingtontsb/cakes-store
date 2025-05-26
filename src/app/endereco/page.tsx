@@ -57,12 +57,12 @@ export default function Page(){
 		<>
 			<div className='container mx-auto mb-5'>
 				<Header />
-				<div className='my-10 text-lg'>Veja o(s) bolo(s) que você selecionou e informe seus dados para a entrega:</div>
+				<div className='my-10 text-md font-bold text-center md:text-lg'>Veja o(s) bolo(s) que você selecionou e informe seus dados para a entrega:</div>
 				{cart && 
 					cart.map((item, index)=>(
 						<div
 							key={index}
-							className='flex gap-10 items-center my-4'
+							className='flex gap-10 items-center my-4 ml-4'
 						>
 							<div>
 								<Image
@@ -76,10 +76,10 @@ export default function Page(){
 						</div>
 					))
 				}
-				<div className='border-t my-10 pt-4 text-2xl'>Valor Total: R$ {calcTotalPrice(cart)}</div>
+				<div className='border-t my-10 pt-4 text-xl px-2 md:text-2xl'>Valor Total: R$ {calcTotalPrice(cart)}</div>
 				<div className='max-w-5xl mx-auto border rounded-md py-5 px-2'>
 					<form onSubmit={handleForm}>
-						<div className='flex justify-between'>
+						<div className='flex flex-col justify-between md:flex-row'>
 							<label>
 								CEP:
 								<input
@@ -107,7 +107,7 @@ export default function Page(){
 								/>
 							</label>
 						</div>
-						<div  className='flex justify-between'>
+						<div  className='flex flex-col justify-between md:flex-row'>
 							<label>
 								Complemento:
 								<input

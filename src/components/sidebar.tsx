@@ -22,7 +22,7 @@ export const Sidebar=({isShownCart})=>{
 	}
 
 	return(
-		<div className='fixed top-0 right-0 h-full w-72 bg-black/85 text-white'>
+		<div className='fixed top-0 right-0 h-full w-full bg-black/85 text-white sm:w-72'>
 			<XIcon className='cursor-pointer fixed right-0' onClick={isShownCart}/>
 			<div className='text-lg text-center pt-8 pb-4 border-b'>Carrinho</div>
 			{cart &&
